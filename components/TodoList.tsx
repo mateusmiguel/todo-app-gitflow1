@@ -34,13 +34,17 @@ export function TodoList() {
       <TodoForm onAdd={addTodo} />
       <ul className="space-y-2">
         {todos.map((t) => (
-          <li key={t.id} className="p-2 border rounded flex justify-between items-center">
+          <li
+            key={t.id}
+            className="p-2 border rounded flex justify-between items-center"
+          >
             <span
               className={`cursor-pointer ${t.done ? 'line-through text-gray-500' : ''}`}
               onClick={() => toggleTodo(t.id)}
             >
               {t.title}
             </span>
+
             <button onClick={() => deleteTodo(t.id)} className="ml-4">
               🗑️
             </button>
