@@ -63,7 +63,7 @@ export default function TodoList() {
         {todos.map((t) => (
           <li
             key={t.id}
-            className="p-2 border rounded flex justify-between items-center"
+            className="todo__item p-2 border rounded flex justify-between items-center"
           >
             <span
               className={`cursor-pointer ${t.done ? 'todo--done' : ''}`}

@@ -48,4 +48,14 @@ describe('TodoList', () => {
 
         expect(task).not.toBeInTheDocument();
     });
+
+    it('should not add task blank', () => {
+        render(<TodoList />)
+
+        fireEvent.click(screen.getByText('Adicionar'));
+
+        const listItems = screen.queryAllByRole('listitem');
+
+        expect(listItems.length).toBe(0);
+    });
 });
